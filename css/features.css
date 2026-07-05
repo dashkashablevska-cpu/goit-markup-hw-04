@@ -5,6 +5,9 @@
 .features-list {
     display: flex;
     gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .features-item {
@@ -19,6 +22,8 @@
     background-color: var(--light);
     border-radius: 4px;
     margin-bottom: 8px;
+
+    border: 1px solid #8e8f99;
 }
 
 .features-title {
