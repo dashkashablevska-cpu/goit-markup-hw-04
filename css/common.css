@@ -1,35 +1,41 @@
 :root {
-    --primary-font: "Roboto", sans-serif;
-    --secondary-font: "Raleway", sans-serif;
-    --primary-text-color: #434455;
-    --dark-text-color: #2e2f42;
-    --light-text-color: #f4f4fd;
-    --accent-color: #4d5ae5;
-    --white-color: #ffffff;
-    --hero-btn-hover: #404bbf;
+    --primary-brand: #4d5ae5;
+    --pressed-state: #404bbf;
+    --dark: #2e2f42;
+    --success: #31d0aa;
+    --text: #434455;
+    --subtle-text: #8e8f99;
+    --accent: #e7e9fc;
+    --light: #f4f4fd;
+    --white: #ffffff;
 }
 
-p,
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--text);
+    background-color: var(--white);
+    margin: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    margin-top: 0;
-    margin-bottom: 0;
+h6,
+p {
+    margin: 0;
 }
 
-ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+ul,
+ol {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: currentColor;
 }
 
 img {
@@ -38,19 +44,10 @@ img {
     height: auto;
 }
 
-body {
-    font-family: var(--primary-font);
-    color: var(--primary-text-color);
-    background-color: var(--white-color);
-    letter-spacing: 0.02em;
-}
-
 .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
 .sr-only {
@@ -67,11 +64,19 @@ body {
 }
 
 .logo {
-    font-family: var(--secondary-font);
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--accent-color);
+    color: var(--primary-brand);
+}
+
+.logo-dark {
+    color: var(--dark);
+}
+
+.logo-light {
+    color: var(--light);
 }

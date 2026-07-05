@@ -1,8 +1,14 @@
-.page-header {
-    border-bottom: 1px solid #e7e9fc;
+.header {
+    border-bottom: 1px solid var(--accent);
 }
 
-.page-header .container {
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
     display: flex;
     align-items: center;
 }
@@ -11,37 +17,45 @@
     margin-right: 76px;
 }
 
-.header-logo .logo-accent {
-    color: var(--dark-text-color);
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-
 .nav-list {
     display: flex;
     gap: 40px;
 }
 
 .nav-link {
+    display: block;
+    padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--dark-text-color);
-    padding: 24px 0;
-    display: block;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--accent-color);
+    color: var(--pressed-state);
+}
+
+.nav-link.active {
+    color: var(--pressed-state);
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--pressed-state);
+    border-radius: 2px;
 }
 
 .contacts {
     font-style: normal;
-    margin-left: auto;
 }
 
 .contacts-list {
@@ -50,14 +64,16 @@
 }
 
 .contacts-link {
+    display: block;
+    padding: 24px 0;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--primary-text-color);
-    padding: 24px 0;
-    display: block;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
-    color: var(--accent-color);
+    color: var(--pressed-state);
 }
